@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diagnosis Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+     Diagnosis Result
+</div>
+
+<div class="container">
+
+    <h2>Diagnosis Outcome</h2>
+
+    {% if result %}
+        <div class="result">
+            <p><strong> Disease:</strong> {{ result.disease }}</p>
+            <p><strong> Treatment:</strong> {{ result.treatment }}</p>
+            <p><strong> Confidence:</strong> {{ result.cf }}</p>
+        </div>
+
+        <div class="card">
+            <h3> Explanation</h3>
+            <p>The system reached this conclusion based on the following symptoms:</p>
+            <p><strong>{{ result.conditions }}</strong></p>
+        </div>
+
+    {% else %}
+        <p class="error"> No matching disease found. Try selecting more symptoms.</p>
+    {% endif %}
+    {% if result %}
+
+<div class="result">
+    <p><strong>Disease:</strong> {{ result.disease }}</p>
+    <p><strong>Treatment:</strong> {{ result.treatment }}</p>
+    <p><strong>Confidence:</strong> {{ result.cf }}</p>
+</div>
+
+<h3>Explanation</h3>
+
+<p><strong>Symptoms Entered:</strong></p>
+<ul>
+    {% for s in result.input_symptoms %}
+        <li>{{ s }}</li>
+    {% endfor %}
+</ul>
+
+<p><strong>Rule Applied:</strong></p>
+<p>
+IF {{ result.conditions | join(" AND ") }}
+THEN {{ result.disease }}
+</p>
+
+{% else %}
+<p>No disease found</p>
+{% endif %}
+
+    <div style="text-align:center; margin-top:20px;">
+        <a href="/" class="btn-secondary"> Try Again</a>
+        <a href="/dashboard" class="btn-secondary">⬅ Dashboard</a>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+.navbar {
+    background-color: #1f2937;
+    color: #fff;
+    padding: 16px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+
+.container {
+    max-width: 850px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+
+h1, h2, h3 {
+    color: #1f2937;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+
+input[type="text"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    font-size: 14px;
+    transition: border 0.2s ease;
+}
+
+input:focus,
+select:focus {
+    border-color: #2563eb;
+    outline: none;
+}
+
+
+.checkbox-group {
+    margin: 15px 0;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #16a34a;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: #15803d;
+    transform: translateY(-1px);
+}
+
+/* SECONDARY BUTTON */
+.btn-secondary {
+    background-color: #2563eb;
+}
+
+.btn-secondary:hover {
+    background-color: #1d4ed8;
+}
+
+
+.result {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ecfdf5;
+    border-left: 5px solid #16a34a;
+}
+
+.result p {
+    margin-bottom: 8px;
+}
+
+
+.error {
+    color: #dc2626;
+    text-align: center;
+    font-weight: 500;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+}
+
+table th,
+table td {
+    padding: 12px;
+    border: 1px solid #e5e7eb;
+    text-align: center;
+}
+
+table th {
+    background-color: #1f2937;
+    color: #fff;
+    font-weight: 600;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+
+a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* LOGIN PAGE IMPROVEMENT */
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-card h2 {
+    margin-bottom: 20px;
+}
+
+.login-card input {
+    margin-bottom: 15px;
+}
+
+.auth-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* CARD DESIGN */
+.card {
+    margin-bottom: 25px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* DELETE BUTTON */
+.delete-btn {
+    color: white;
+    background-color: #dc2626;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 13px;
+}
+
+.delete-btn:hover {
+    background-color: #b91c1c;
+}
+
+/* TABLE IMPROVEMENT */
+table td {
+    font-size: 14px;
+}
+
+/* BACK BUTTON STYLE */
+.btn-secondary {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #2563eb;
+    color: white;
+    border-radius: 6px;
+}
+
+.btn-secondary:hover {
+    background-color: #1d4ed8;
+}
+
+.card {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.btn-secondary {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #2563eb;
+    color: white;
+    border-radius: 6px;
+}
+
+.btn-secondary:hover {
+    background-color: #1d4ed8;
+}
+
+.delete-btn {
+    background-color: #dc2626;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+}

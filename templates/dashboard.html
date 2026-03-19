@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    🌽 Maize Expert System Dashboard
+</div>
+
+<div class="container">
+
+    <h2>Welcome, {{ session.user }}</h2>
+
+    {% if role == 'admin' %}
+        <div class="card">
+            <h3>⚙️ Admin Panel</h3>
+            <p>Manage expert system rules and system data.</p>
+            <a href="/admin" class="btn-secondary">Manage Rules</a>
+        </div>
+    {% else %}
+        <div class="card">
+            <h3>🌱 Farmer Panel</h3>
+            <p>Diagnose maize diseases based on symptoms.</p>
+            <a href="/" class="btn-secondary">Start Diagnosis</a>
+        </div>
+    {% endif %}
+
+    <div style="text-align:center; margin-top:20px;">
+        <a href="/logout" class="delete-btn">Logout</a>
+    </div>
+
+</div>
+
+</body>
+</html>

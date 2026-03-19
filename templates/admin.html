@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+     Admin Panel - Manage Rules
+</div>
+
+<div class="container">
+
+    <!-- ADD RULE CARD -->
+    <div class="card">
+        <h3>Add New Rule</h3>
+
+        <form method="POST" action="/add_rule">
+            <input type="text" name="conditions" placeholder="e.g holes_leaves,caterpillars" required>
+
+            <input type="text" name="disease" placeholder="Disease name" required>
+
+            <input type="text" name="treatment" placeholder="Treatment" required>
+
+            <input type="number" step="0.01" name="cf" placeholder="Confidence (0-1)" required>
+
+            <button type="submit">Add Rule</button>
+        </form>
+    </div>
+
+    <!-- RULES TABLE -->
+    <div class="card">
+        <h3>Existing Rules</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Conditions</th>
+                    <th>Disease</th>
+                    <th>Treatment</th>
+                    <th>CF</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for rule in rules %}
+                <tr>
+                    <td>{{ rule.conditions }}</td>
+                    <td>{{ rule.disease }}</td>
+                    <td>{{ rule.treatment }}</td>
+                    <td>{{ rule.cf }}</td>
+                    <td>
+                        <a class="delete-btn" href="/delete_rule/{{ rule.id }}">Delete</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div style="text-align:center; margin-top:20px;">
+        <a href="/dashboard" class="btn-secondary">⬅ Back to Dashboard</a>
+    </div>
+
+</div>
+
+</body>
+</html>

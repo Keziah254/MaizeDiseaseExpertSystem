@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Maize Diagnosis System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+     Maize Disease Diagnosis
+</div>
+
+<div class="container">
+
+    <h2>Select Symptoms</h2>
+    <p style="text-align:center;">Choose the symptoms observed in your maize crop.</p>
+
+    <form action="/diagnose" method="POST">
+
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="symptoms" value="yellow_streaks"> Yellow streaks</label>
+            <label><input type="checkbox" name="symptoms" value="stunted_growth"> Stunted growth</label>
+            <label><input type="checkbox" name="symptoms" value="gray_lesions"> Gray lesions</label>
+            <label><input type="checkbox" name="symptoms" value="lower_leaves"> Lower leaves affected</label>
+            <label><input type="checkbox" name="symptoms" value="holes_leaves"> Holes in leaves</label>
+            <label><input type="checkbox" name="symptoms" value="caterpillars"> Caterpillars visible</label>
+        </div>
+
+        <button type="submit"> Diagnose</button>
+    </form>
+
+    <div style="text-align:center; margin-top:20px;">
+        <a href="/dashboard" class="btn-secondary">⬅ Back to Dashboard</a>
+    </div>
+
+</div>
+
+</body>
+</html>
